@@ -5,6 +5,18 @@ interface CowsayOptions {
     tongue?: string
 }
 
+/**
+* / **
+*  * Generates an ASCII art representation of a cow with a speech or thought bubble.
+*  *
+*  * @param options - Either a string to display as the cow's message, or an object specifying:
+*  *   - text: The message to display inside the bubble.
+*  *   - mode: "say" for speech bubble or "think" for thought bubble (default: "say").
+*  *   - eyes: Custom characters for the cow's eyes (default: "oo").
+*  *   - tongue: Custom characters for the cow's tongue (default: two spaces).
+*  * @returns The complete ASCII cow with the message in the specified mode.
+*  * /
+*/
 export function cowsay(options: CowsayOptions | string): string {
     // Handle string argument
     const opts: CowsayOptions =
